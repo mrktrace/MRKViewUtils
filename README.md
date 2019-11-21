@@ -9,3 +9,5 @@ MRKTransitions is a Swift pod to make transitions between screens easier, also i
   ```ruby
   pod 'MRKViewUtils'
   ```
+
+I hope this pod is useful to you, and if it saves your life you can get me a beer! 🍺
