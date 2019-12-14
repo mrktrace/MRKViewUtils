@@ -29,7 +29,7 @@ open class MRKTVDatasource<C:UITableViewCell, D:Any>: NSObject, UITableViewDataS
         return data?[section].count ?? 0
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(C.self, for: indexPath)
         let d = data![indexPath.section][indexPath.row]
         representCell(tv:tableView, at: indexPath, with: d, in: cell)

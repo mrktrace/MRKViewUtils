@@ -25,11 +25,11 @@ open class MRKCVDatasource<C:UICollectionViewCell, D:Any>: NSObject, UICollectio
         return data?.count ?? 0
     }
     
-    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data?[section].count ?? 0
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(C.self, for: indexPath)
         let d = data![indexPath.section][indexPath.row]
         representCell(cv:collectionView, at: indexPath, with: d, in: cell)
