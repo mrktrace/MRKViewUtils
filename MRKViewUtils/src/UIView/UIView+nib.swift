@@ -13,3 +13,7 @@ extension UIView {
         return UINib(nibName: className, bundle: nil)
     }
 }
+
+public func loadNib<T:UIView>( _ class:T.Type ) -> T? {
+    return Bundle.main.loadNibNamed(T.className, owner: nil, options: nil)?.first as? T
+}
